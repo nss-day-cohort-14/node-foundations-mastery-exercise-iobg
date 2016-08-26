@@ -7,10 +7,7 @@ limiter._transform=(buffer,_,cb)=>{
 		console.log(buffer.toString());
 		cb()
 		i++;
-		}
+	}
 }
-
-	
-
 
 module.exports=limiter;
