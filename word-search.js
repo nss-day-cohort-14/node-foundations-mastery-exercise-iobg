@@ -1,6 +1,6 @@
 let {createReadStream}=require('fs');
 let limitTen=require('./limit-ten')
-
+let hackType=require('./hacker-typer');
 let es =require('event-stream');
 let {inspect}=require('util');
 let data='';
@@ -16,6 +16,6 @@ readStream
     		else cb();
        }))
     	.pipe(limitTen)
-    		.pipe(process.stdout);     
+    		.pipe(hackType)  
 
 
