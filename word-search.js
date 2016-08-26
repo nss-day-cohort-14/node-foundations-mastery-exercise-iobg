@@ -9,7 +9,7 @@ let readStream=createReadStream('/usr/share/dict/words');
 readStream
 .pipe(es.split())                  
     .pipe(es.map(function (data, cb) {
-    	if(data.substring(0,arg.length)===arg){
+    	if(data.toUpperCase().substring(0,arg.length)===arg.toUpperCase()){
     		cb(null, data)
     	}
     		else cb();
